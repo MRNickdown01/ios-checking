@@ -1,0 +1,918 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@supports (padding: max(0px)) {
+  body,
+  header,
+  footer {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+:root {
+  --background-color: #46b01c, #b2e6cc, white;
+  --heading-color: black;
+  --info-text-color: rgb(73, 73, 73);
+  --button-hover-color: rgba(105, 225, 255, 0.493);
+  --card-color: rgb(226, 226, 226);
+  --card2-color: rgba(105, 225, 255, 0.493);
+  /* #46b01c,
+  #6be13d,
+  #a1ec83; */
+}
+body {
+  background-image: linear-gradient(to bottom right, var(--background-color));
+}
+.logo {
+  font-family: sans-serif;
+  padding-left: 60px;
+}
+.logo a > img {
+  width: 200px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.mainMenu {
+  padding: 20px;
+  float: right;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-right: 40px;
+}
+nav .mainMenu > li > a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--heading-color);
+  padding: 20px;
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+nav .mainMenu .closeMenu {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.mainMenu > button {
+  background-color: var(--heading-color);
+  color: white;
+  font-size: 19px;
+  padding: 10px;
+  width: 145px;
+  border-radius: 50px;
+}
+.title > h3 {
+  font-size: 70px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 100px;
+}
+.title > p {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.home-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  gap: 19px;
+}
+#btn-1 {
+  background-color: var(--heading-color);
+  color: white;
+  font-size: 19px;
+  padding: 10px;
+  width: 145px;
+  border-radius: 50px;
+}
+#btn-2 {
+  background-color: white;
+  color: var(--heading-color);
+  font-weight: bold;
+  font-size: 19px;
+  padding: 10px;
+  width: 145px;
+  border: none;
+  border-radius: 50px;
+}
+.home-btn > #btn-1:hover {
+  background-color: rgba(105, 225, 255, 0.493);
+  color: black;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 300ms;
+}
+.get-way-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get-way-image > img {
+  /* border: 10px solid #b8b8b8; */
+  border-radius: 25px;
+  width: 83%;
+  height: 100%;
+  /* box-shadow: 15px -15px #a4dfb5; */
+  box-shadow: 0 -5px 10px -6px #191919;
+}
+.payment {
+  padding-top: 40px;
+}
+.works {
+  padding-top: 100px;
+}
+
+.work-info {
+  padding-left: 130px;
+}
+.work-info > h3 {
+  font-size: 41px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  /* padding: 1rem 7rem; */
+}
+.work-info > p {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding-top: 25px;
+  color: var(--info-text-color);
+  letter-spacing: 2px;
+}
+.work-cards-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 2rem 0px;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#work-card-1 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-color);
+  border-radius: 12px;
+  box-shadow: 0 -5px 10px -6px #191919;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) -2px -3px 2px inset; */
+}
+#work-card-1 > .card-block {
+  padding: 30px 20px;
+}
+
+.card-block > .card-icon > i {
+  font-size: 2rem;
+  display: inline;
+}
+
+#work-card-1 > .card-block > .card-icon > .card-title {
+  padding: 10px 0px;
+  font-size: 20px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: bold;
+}
+
+#work-card-1 > .card-block > .card-text {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  /* padding-top: 15px; */
+  /* padding: 15px 20px; */
+}
+.how-its-work-card-main {
+  display: flex;
+  flex-direction: row;
+  /* margin: 2rem 6rem; */
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.how-it {
+  padding-top: 25px;
+}
+.how-its-work-tittle {
+  padding-left: 130px;
+}
+.how-its-work-tittle > h3 {
+  font-size: 50px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  /* padding-left: 6%; */
+  letter-spacing: 2px;
+  padding-bottom: 25px;
+}
+#work-card-2 {
+  background-color: var(--card2-color);
+  border-radius: 12px;
+  box-shadow: 0 -5px 10px -6px #191919;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) -2px -3px 2px inset; */
+}
+
+#work-card-2 > .card-block {
+  padding: 30px 20px;
+}
+.card-block > .card-icon > img {
+  width: 70px;
+  padding-right: 15px;
+}
+#work-card-2 > .card-block > .card-icon {
+  width: 6rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  align-items: center;
+  background-color: #fff;
+}
+#work-card-2 > .card-block > .card-title {
+  padding: 10px 0px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+#work-card-2 > .card-block > .card-text {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 15px;
+  /* padding: 15px 20px; */
+}
+.heading-about-more {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: bold;
+}
+.about_bg_image > img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 -5px 10px -6px #191919;
+  border-radius: 15px;
+  background: transparent;
+  /* margin: 5.5rem; */
+}
+#about-all {
+  display: flex;
+}
+.about_info {
+  padding-top: 2rem;
+  padding-right: 20px;
+}
+.heading-about-more {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.about_info_1 {
+  font-size: 20px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  padding-top: 25px;
+  padding-right: 4rem;
+  color: var(--info-text-color);
+  letter-spacing: 2px;
+}
+
+.footer-card {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 25px;
+  border-radius: 20px;
+  background-color: var(--card-color);
+  box-shadow: 0 -5px 10px -6px #191919;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) -2px -3px 2px inset; */
+}
+.footer-card-position {
+  margin: 0px 120px;
+}
+#footer-card-in {
+  display: inline;
+}
+
+.footer-tittle {
+  text-align: center;
+  /* padding: 15px 12px; */
+  padding-top: 5rem;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.footer-text {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 500;
+  color: var(--info-text-color);
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+#emailbox > input {
+  height: 42px;
+  border-radius: 50px;
+  width: 15rem;
+  padding: 15px;
+  font-size: 16px;
+}
+#emailbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  gap: 10px;
+}
+#emailbox > button {
+  background-color: black;
+  color: white;
+  font-size: 19px;
+  height: 42px;
+  width: 110px;
+  border-radius: 50px;
+}
+#emailbox:hover > button {
+  background-color: rgba(105, 225, 255, 0.493);
+  color: black;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 300ms;
+}
+.all-info-abt {
+  padding-right: 15%;
+}
+.about_section {
+  text-align: -webkit-left;
+}
+.about_section {
+  margin-left: 130px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+}
+footer {
+  background-color: var(--card-color);
+}
+.footer-main-details {
+  margin-top: 10rem;
+  padding-top: 50px;
+}
+.all-footer-info {
+  width: auto !important;
+}
+.footer-logo {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.footer-logo > p {
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+.footer-on-2 > h3,
+.footer-on-4 > h4 {
+  text-transform: uppercase;
+}
+.footer-on-2 > p {
+  font-size: 18px;
+  text-align: left;
+}
+.footer-on-3 > p {
+  font-size: 18px;
+  line-height: 35px;
+}
+.footer-info-details > i {
+  font-size: 20px;
+}
+
+.footer-icon > i {
+  font-size: 30px;
+  letter-spacing: 10px;
+  border-radius: 10px;
+}
+.footer-icon > i:hover {
+  color: #67c051;
+  cursor: pointer;
+}
+.all-footer-info {
+  justify-content: center;
+}
+
+.footer-on-2 > p {
+  line-height: 40px;
+}
+
+.footer-on-3 > h3 {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .about_bg_image > img {
+    width: 100%;
+    height: 100%;
+  }
+  .about_info {
+    padding-top: 0px;
+  }
+  .heading-about-more {
+    font-size: 27px;
+  }
+  .about_info_1 {
+    font-size: 16px;
+  }
+
+  #work-card-2 {
+    width: 100%;
+    height: 100%;
+  }
+  .how-its-work-card-main {
+    margin: 0px 0px;
+  }
+  .all-info-abt {
+    padding-right: 15px;
+  }
+  .work-info {
+    padding-left: 90px;
+  }
+  #work-card-1 > .card-block > .card-icon > .card-title {
+    font-size: 16px;
+  }
+  #work-card-1 > .card-block > .card-text {
+    font-size: 15px;
+  }
+  .work-info > h3 {
+    font-size: 35px;
+  }
+  .card-block > .card-icon > img {
+    padding: 15px;
+  }
+  #work-card-2 > .card-block > .card-title {
+    font-size: 9px;
+  }
+  #work-card-2 > .card-block > .card-text {
+    font-size: 15px;
+  }
+  #work-card-2 > .card-block > .card-icon {
+    width: 5rem;
+  }
+  .how-its-work-tittle {
+    padding-left: 85px;
+  }
+  .about_section {
+    margin-left: 85px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .mainMenu {
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    transition: top 1s ease-in-out 0s;
+    display: none;
+  }
+  .logo a > img {
+    width: 90%;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+  }
+
+  .footer-icon {
+    font-size: 38px;
+    margin-bottom: 1rem;
+  }
+  nav {
+    padding-top: 50px;
+    margin-top: 0px;
+  }
+  nav .openMenu {
+    display: block;
+    position: absolute;
+    padding-left: 2%;
+    font-size: 37px;
+  }
+
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+  }
+  nav .mainMenu > li > a {
+    color: #fff;
+  }
+  nav .mainMenu > li > a {
+    font-size: 20px;
+    line-height: 2;
+  }
+  .logo {
+    padding-left: 75%;
+    font-size: 15px;
+  }
+  .get-way-image > img {
+    width: 83%;
+    height: 100%;
+  }
+  .how-its-work-card-main {
+    margin: 8px;
+    margin: 0px 0px;
+    margin-left: 0px;
+  }
+  .about_bg_image > img {
+    width: 95%;
+    margin: 0px;
+  }
+  .work-info > h3 {
+    font-size: 30px;
+  }
+  .how-its-work-tittle > h3 {
+    padding-left: 0px;
+  }
+  .work-info > p {
+    font-size: 15px;
+    padding-top: 20px;
+  }
+  #work-card-2 {
+    width: 100%;
+  }
+  #work-card-1 {
+    width: 100%;
+    height: 100%;
+  }
+  .work-cards-main {
+    margin: 12px;
+  }
+  .how-its-work-card-main {
+    flex-wrap: wrap;
+  }
+  #about-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading-about-more,
+  .about_info {
+    padding-right: 0px;
+  }
+  #work-card-1 > .card-block > .card-icon > .card-title {
+    font-size: 10px;
+    padding: 10px 0px;
+  }
+  #work-card-1 > .card-block > .card-text {
+    font-size: 10px;
+    padding-top: 0px;
+    padding: 0px 0px;
+  }
+
+  .about_info {
+    padding-top: 20px;
+  }
+  #all-info-abt {
+    /* margin: 0px 20px; */
+    padding-bottom: 45px;
+    /* padding-left: 8%; */
+  }
+  .about_section {
+    margin-left: 0px;
+  }
+  .about_bg_image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .how-its-work-tittle {
+    text-align: center;
+  }
+
+  .all-info-abt {
+    padding-right: 0px;
+  }
+  .how-its-work-card-main {
+    margin-left: 0px;
+    margin: 12px;
+  }
+  .works {
+    padding-top: 60px;
+  }
+  .footer-card-position {
+    margin: 0px 0px;
+  }
+  .about_section {
+    margin-top: 0px;
+  }
+  .how-it {
+    padding-bottom: 55px;
+  }
+  .work-info {
+    padding-left: 65px;
+  }
+  .how-its-work-tittle {
+    padding-left: 0px;
+  }
+  .about_section {
+    padding-bottom: 80px;
+  }
+  .about_bg_image > img {
+    width: 100%;
+    height: 100%;
+  }
+  .about_section {
+    margin-left: 40px !important;
+  }
+  #all-info-abt {
+    padding-bottom: 45px;
+  }
+  .heading-about-more {
+    font-size: 21px;
+  }
+  .about_info_1 {
+    padding-right: 0px;
+    letter-spacing: 0px;
+    font-size: 13px;
+  }
+  #work-card-2 > .card-block > .card-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+  }
+  .card-block > .card-icon > img {
+    margin: 8px;
+    width: 42px;
+  }
+  #work-card-2 > .card-block > .card-title {
+    padding: 10px 0px;
+    font-size: 10px;
+  }
+  #work-card-2 > .card-block > .card-text {
+    font-size: 10px;
+    padding-top: 0px;
+    padding: 0px 0px;
+  }
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+  .footer-on-2 > h3 {
+    text-align: left;
+  }
+  .footer-on-2 > p {
+    text-align: left;
+  }
+  .footer-on-3 {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 570px) {
+  .title > h3 {
+    font-size: 57px;
+    padding-top: 45px;
+  }
+  .title > p {
+    font-size: 15px;
+  }
+  .work-info > h3 {
+    padding: 1rem 2rem;
+  }
+  .about_section {
+    margin-left: 0px !important;
+  }
+}
+@media (max-width: 468px) {
+  nav .mainMenu {
+    width: 100%;
+    height: 60vh;
+  }
+  nav {
+    padding-top: 30px;
+  }
+  .title > h3 {
+    padding-top: 65px;
+  }
+  nav .openMenu {
+    position: absolute;
+    /* padding-left: 20px; */
+    font-size: 22px;
+  }
+  .logo {
+    padding-left: 55%;
+    font-size: 18px;
+  }
+  .title > h3 {
+    font-size: 40px;
+  }
+  .get-way-image > img {
+    height: 100%;
+    width: 100%;
+  }
+  .about_section {
+    margin-left: 0px !important;
+  }
+  .work-info > h3 {
+    font-size: 20px;
+    padding: 0px 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .how-its-work-tittle > h3 {
+    font-size: 40px;
+  }
+  .work-info > p {
+    padding-left: 13px;
+  }
+  .works {
+    padding-top: 35px;
+  }
+  #work-card-1 {
+    width: 100%;
+    height: 100%;
+  }
+  .how-its-work-tittle {
+    padding-left: 0px;
+  }
+  #all-info-abt {
+    padding-left: 0px;
+    padding: 1rem;
+  }
+  .work-info {
+    padding-left: 0px;
+  }
+  .about_bg_image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .about_bg_image > img {
+    width: 100%;
+    height: 100%;
+    /* margin: 28px; */
+  }
+  .heading-about-more {
+    font-size: 25px;
+  }
+  .about_info_1 {
+    font-size: 16px;
+    padding-right: 0px;
+  }
+  .about_section {
+    margin-left: 0px;
+  }
+  .footer-tittle {
+    padding-top: 2rem;
+    font-size: 25px;
+  }
+  .footer-text {
+    font-size: 15px;
+  }
+  #work-card-2 > .card-block > .card-title {
+    font-size: 17px;
+  }
+  .about_section {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .about_section {
+    padding-bottom: 45px;
+  }
+  .footer-main-details {
+    margin-right: 50px;
+  }
+  .footer-icon > i {
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 358px) {
+  .about_bg_image > img {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+  }
+  .title > p {
+    font-size: 16px;
+    padding: 6px 15px;
+  }
+  .title > h3 {
+    font-size: 36px;
+  }
+  nav .mainMenu {
+    width: 100%;
+    height: 68vh;
+  }
+  .footer-tittle {
+    font-size: 23px;
+  }
+  .footer-text {
+    letter-spacing: 0;
+  }
+  #work-card-1 {
+    width: 100%;
+    height: 100%;
+  }
+  .how-its-work-card-main {
+    margin: 1rem;
+  }
+  .heading-about-more {
+    padding-right: 0px;
+  }
+  #emailbox {
+    flex-direction: column;
+  }
+  #emailbox > input {
+    width: 100%;
+  }
+  .about_info_1 {
+    font-size: 12px;
+  }
+  .heading-about-more {
+    font-size: 25px;
+  }
+  .heading-about-more {
+    padding-right: 0px;
+  }
+  .how-it {
+    padding-bottom: 0px;
+  }
+  .how-its-work-tittle > h3 {
+    font-size: 30px;
+  }
+  .title > h3 {
+    padding-top: 35px;
+  }
+  .title > h3 {
+    font-size: 25px;
+  }
+  nav {
+    padding-top: 30px;
+  }
+  .logo {
+    font-size: 14px;
+    padding-left: 50%;
+  }
+  #btn-1,
+  #btn-2 {
+    font-size: 16px;
+    width: 130px;
+  }
+  .about_info {
+    padding-top: 5px;
+  }
+  #work-card-2 > .card-block > .card-text {
+    font-size: 15px;
+  }
+  #work-card-1 > .card-block > .card-icon > .card-title {
+    font-size: 18px;
+  }
+  #work-card-1 > .card-block > .card-text {
+    font-size: 15px;
+  }
+  .home-btn {
+    flex-direction: column;
+  }
+}
+.works {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+}

@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-@supports (padding: max(0px)) {
+/* @supports (padding: max(0px)) {
   body,
   header,
   footer {
@@ -11,7 +11,7 @@
     padding-top:env(safe-area-inset-top);
     margin-bottom: constant(safe-area-inset-bottom);
     margin-bottom:env(safe-area-inset-bottom);
-  }
+  } */
 
 : root {
   --background-color: #46b01c, #b2e6cc, white;

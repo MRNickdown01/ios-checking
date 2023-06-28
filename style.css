@@ -7,8 +7,10 @@
   body,
   header,
   footer {
-    padding-left: min(0vmin, env(safe-area-inset-left));
-    padding-right: min(0vmin, env(safe-area-inset-right));
+    padding-top: constant(safe-area-inset-top);
+    padding-top:env(safe-area-inset-top);
+     margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom:env(safe-area-inset-bottom);
   }
 }
 :root {
